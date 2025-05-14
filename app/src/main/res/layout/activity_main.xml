@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <EditText
+        android:id="@+id/editTextKeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入信息" />
+
+    <Button
+        android:id="@+id/buttonWeb_Check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络检测"/>
+    <Button
+        android:id="@+id/buttonWeather_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="城市天气预报"/>
+
+    <Button
+        android:id="@+id/buttonRead_ContactList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取联系人信息"/>
+
+
+
+</LinearLayout>

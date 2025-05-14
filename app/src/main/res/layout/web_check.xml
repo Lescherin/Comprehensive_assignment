@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络状态监听诊断"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当网络状态发生变化时会显示Toast提示"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/buttonBroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送自定义广播"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/buttonBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到浏览器搜索进行测试"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="32dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示：可以尝试切换网络状态来测试监听器"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
