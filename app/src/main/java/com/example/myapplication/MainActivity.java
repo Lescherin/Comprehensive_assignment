@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             // 设置标题
             actionBar.setTitle("2411664 大作业");
-            // 显示返回按钮
-            actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         editTextKeyword = findViewById(R.id.editTextKeyword);

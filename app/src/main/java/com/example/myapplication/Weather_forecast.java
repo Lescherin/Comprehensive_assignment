@@ -46,9 +46,9 @@ public class Weather_forecast extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weather_forecast);
 
-        textView = (TextView) findViewById(R.id.textView);
-        editText = (EditText) findViewById(R.id.editText);
-        button = (Button) findViewById(R.id.button);
+        textView = findViewById(R.id.textView);
+        editText = findViewById(R.id.editText);
+        button = findViewById(R.id.button);
 
 
         ActionBar actionBar = getSupportActionBar();
