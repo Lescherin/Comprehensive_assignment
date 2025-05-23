@@ -27,25 +27,16 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5a1b0338-4972-43e7-b205-0ad3c0b6142d">
-      <console name="Connection" type="STANDARD" schema="MyContacts" session="Main"><![CDATA[select
-    c."name"
-from
-    "contacts" c;
-
-
-delete 
-    
-from
-    "contacts" c
-where
-    c."name"='三星1','乐金','夏普';]]></console>
+      <console name="Connection" type="STANDARD" schema="MyContacts" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="5a1b0338-4972-43e7-b205-0ad3c0b6142d" object-ref="consoles/Connection" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="5a1b0338-4972-43e7-b205-0ad3c0b6142d" />
