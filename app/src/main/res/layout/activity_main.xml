@@ -28,6 +28,31 @@
         android:layout_height="wrap_content"
         android:text="读取联系人信息"/>
 
+    <Button
+        android:id="@+id/buttonSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传感器实时检测"/>
+
+    <Button
+        android:id="@+id/buttonCall_Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开拨号界面"/>
+
+    <Button
+        android:id="@+id/buttonGmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开GMAIL邮箱"/>
+
+    <Button
+        android:id="@+id/buttonLISTVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开LISTVIEW"/>
+
+
 
 
 </LinearLayout>

@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-    <!--添加请求-->
+    <!-- 添加请求 -->
     <queries>
         <!-- 允许查询能够处理查看联系人列表的 Intent -->
         <intent>
@@ -15,6 +15,7 @@
             <data android:mimeType="vnd.android.cursor.dir/contact" />
         </intent>
     </queries>
+
 
     <application
         android:allowBackup="true"
@@ -25,18 +26,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
-        tools:targetApi="31">
+        >
 
-
-
-        <activity android:name=".MainActivity" android:exported="true">
+<!--活动部分-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Web_check"
+        <activity
+            android:name=".Web_Check"
             android:exported="true"
             android:label="网络状态诊断"
             android:parentActivityName=".MainActivity">
@@ -44,12 +47,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
             <intent-filter>
-                <action android:name="WEB_CHECK"/> 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="WEB_CHECK" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Weather_forecast"
+        <activity
+            android:name=".Weather_Forecast"
             android:exported="true"
             android:label="城市天气预报"
             android:parentActivityName=".MainActivity">
@@ -57,36 +61,53 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
             <intent-filter>
-                <action android:name="WEATHER_FORECAST"/> 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="WEATHER_FORECAST" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Read_ContactList"
+        <activity
+            android:name=".Read_ContactList"
             android:exported="true"
             android:label="本地联系人管理"
-            android:parentActivityName=".MainActivity">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
             <intent-filter>
-                <action android:name="READ_CONTACT_LIST"/>
+                <action android:name="READ_CONTACTLIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Sensor_CHECK"
+            android:exported="true"
+            android:label="传感器实时检测"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="Sensor" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
-        <receiver android:name=".BootComplete" android:exported="true">
+
+        <!--广播部分-->
+        <receiver
+            android:name=".BootComplete"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name=".MyBroadcastReceiver" android:exported="true">
-            <intent-filter>
-                <action android:name="com.example.myapplication.MY_BROADCAST"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.myapplication.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
     </application>
-
 
 </manifest>

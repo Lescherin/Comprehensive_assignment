@@ -16,7 +16,7 @@ import androidx.appcompat.app.ActionBar; // 导入 ActionBar
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class Web_check extends AppCompatActivity {
+public class Web_Check extends AppCompatActivity {
     private IntentFilter intentFilter;
     private NetworkChangeReceiver networkChangeReceiver;
 
@@ -42,7 +42,7 @@ public class Web_check extends AppCompatActivity {
         buttonBroadcast.setOnClickListener(v -> {
             Intent broadcastIntent = new Intent("com.example.myapplication.MY_BROADCAST");
             sendBroadcast(broadcastIntent);
-            Toast.makeText(Web_check.this, "自定义广播已发送", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Web_Check.this, "自定义广播已发送", Toast.LENGTH_SHORT).show();
         });
 
 
@@ -65,7 +65,7 @@ public class Web_check extends AppCompatActivity {
                 startActivity(browserIntent); 
             } else {
                 // 如果关键词为空，给用户提示
-                Toast.makeText(Web_check.this, "没有传入文本框信息,请在主页输入搜索关键词后重试", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Web_Check.this, "没有传入文本框信息,请在主页输入搜索关键词后重试", Toast.LENGTH_SHORT).show();
             }
         });
     }

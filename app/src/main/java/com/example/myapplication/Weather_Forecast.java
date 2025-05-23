@@ -10,8 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.MyTrustManager;
-
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -35,7 +33,7 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 
 
-public class Weather_forecast extends AppCompatActivity {
+public class Weather_Forecast extends AppCompatActivity {
     private TextView textView;
     private EditText editText;
     private Button button;

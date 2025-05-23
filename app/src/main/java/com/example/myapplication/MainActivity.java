@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonReadContactList;
 
+    private Button buttonSensor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         buttonWebCheck = findViewById(R.id.buttonWeb_Check);
         buttonWeatherForecast = findViewById(R.id.buttonWeather_forecast);
         buttonReadContactList = findViewById(R.id.buttonRead_ContactList);
+        buttonSensor = findViewById(R.id.buttonSensor);
 
 
         //"网络检测"
@@ -71,9 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         //"读取联系人列表"
         buttonReadContactList.setOnClickListener(v -> {
-            Intent intent = new Intent("READ_CONTACT_LIST"); //
+            Intent intent = new Intent("READ_CONTACTLIST"); //
             intent.addCategory(Intent.CATEGORY_DEFAULT); // 添加 Category
-
             // 检查是否能够正常跳转
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
@@ -81,6 +83,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "无法打开联系人列表", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //"读取传感器信息"
+        buttonSensor.setOnClickListener(v->{
+            Intent intent = new Intent("Sensor"); //
+            intent.addCategory(Intent.CATEGORY_DEFAULT); // 添加 Category
+            // 检查是否能够正常跳转
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "无法打开传感器", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+
     }
 
 }

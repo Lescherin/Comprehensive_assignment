@@ -170,7 +170,6 @@ public class Read_ContactList extends AppCompatActivity {
             cursor.close();
         }
         adapter.notifyDataSetChanged();
-        clearForm(); // 刷新列表后清空表单
     }
 
     //添加一个记录
@@ -283,16 +282,7 @@ public class Read_ContactList extends AppCompatActivity {
         }
     }
 
-    //清空整个表
-    private void clearForm() {
-        editTextName.setText("");
-        editTextPhone.setText("");
-        editTextEmail.setText("");
-        editTextName.clearFocus(); // 移除焦点
-        editTextPhone.clearFocus();
-        editTextEmail.clearFocus();
-        selectedContactId = -1; // 重置所选ID
-    }
+
 
     // 当 Activity 销毁时，关闭数据库连接
     @Override
