@@ -13,6 +13,20 @@
             <action android:name="android.intent.action.VIEW" />
             <data android:mimeType="vnd.android.cursor.dir/contact" />
         </intent>
+
+
+        <!-- 允许查询能够处理发送邮件的 Intent -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+
+        <!-- 允许查询能够处理拨号的 Intent -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+
     </queries>
 
 

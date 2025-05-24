@@ -1,12 +1,14 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-
-import android.widget.Button;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private EditText editTextKeyword;
+
     // 新增按钮引用
     private Button buttonWebCheck;
     private Button buttonWeatherForecast;
-
+    private Button buttonGmail; 
     private Button buttonReadContactList;
-
     private Button buttonSensor;
 
 
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             // 设置标题
-            actionBar.setTitle("2411664 大作业");
+            actionBar.setTitle("2411664 综合作业");
         }
 
         editTextKeyword = findViewById(R.id.editTextKeyword);
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonWeatherForecast = findViewById(R.id.buttonWeather_forecast);
         buttonReadContactList = findViewById(R.id.buttonRead_ContactList);
         buttonSensor = findViewById(R.id.buttonSensor);
+        buttonGmail = findViewById(R.id.buttonGmail);
 
 
         //"网络检测"
@@ -97,7 +100,54 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        // "打开GMAIL邮箱,进行发送邮件"
+        buttonGmail.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(android.net.Uri.parse("mailto:")); // 只显示邮件应用
+            intent.setPackage("com.google.android.gm"); // 直接指定Gmail(包名)跳转
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "无法打开邮件应用", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+    }
+
+    // 新增拨号功能
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String phoneNumber = "";
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.action_call_10000) {
+            phoneNumber = "10000";
+        } else if (itemId == R.id.action_call_10010) {
+            phoneNumber = "10010";
+        } else if (itemId == R.id.action_call_10086) {
+            phoneNumber = "10086";
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+
+        if (!phoneNumber.isEmpty()) {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(android.net.Uri.parse("tel:" + phoneNumber));
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "无法打开拨号界面", Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

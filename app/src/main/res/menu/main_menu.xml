@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_call_10000"
+        android:title="中国电信"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_call_10010"
+        android:title="中国联通"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_call_10086"
+        android:title="中国移动"
+        app:showAsAction="never" />
+
+</menu>

@@ -11,6 +11,13 @@
         android:layout_height="wrap_content"
         android:hint="请输入信息" />
 
+
+    <Button
+        android:id="@+id/buttonGmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开GMAIL邮箱" />
+
     <Button
         android:id="@+id/buttonWeb_Check"
         android:layout_width="match_parent"
@@ -33,24 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="传感器实时检测"/>
-
-    <Button
-        android:id="@+id/buttonCall_Phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="打开拨号界面"/>
-
-    <Button
-        android:id="@+id/buttonGmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="打开GMAIL邮箱"/>
-
-    <Button
-        android:id="@+id/buttonLISTVIEW"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="打开LISTVIEW"/>
 
 
 

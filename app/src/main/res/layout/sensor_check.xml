@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Accelerometer Data:" />
 
+        <!-- 加速度传感器数据显示 -->
         <TableRow
             android:id="@+id/acc"
             android:layout_width="fill_parent"
@@ -42,17 +43,7 @@
                 android:text="3" />
         </TableRow>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Proximity Sensor Data:" />
-
-        <TextView
-            android:id="@+id/proxView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
-
+        <!-- 重力传感器数据显示 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,6 +73,7 @@
                 android:text="3" />
         </TableRow>
 
+        <!-- 步数传感器数据显示 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,6 +90,7 @@
             android:layout_height="wrap_content"
             android:text="Magnetic Sensor Data:" />
 
+        <!-- 磁场传感器数据显示 -->
         <TableRow
             android:id="@+id/mag"
             android:layout_width="fill_parent"
@@ -121,6 +114,68 @@
                 android:layout_height="wrap_content"
                 android:text="3" />
         </TableRow>
+
+        <!--距离传感器数据显示-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proximity Sensor Data:(cm)" />
+
+        <TextView
+            android:id="@+id/proxView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+
+        <!-- 在这里我新增了 环境温度传感器 压力传感器 光照传感器 环境温度传感器 数据显示-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pressure Sensor Data (hPa):" />
+
+        <TextView
+            android:id="@+id/pressureView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Light Sensor Data(lux):" />
+
+        <TextView
+            android:id="@+id/lightView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Temperature Sensor Data (°C):" />
+
+        <TextView
+            android:id="@+id/tempView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Humidity Sensor Data (%):" />
+
+        <TextView
+            android:id="@+id/humidityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A" />
 
     </TableLayout>
 
