@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonGmail; 
     private Button buttonReadContactList;
     private Button buttonSensor;
+    private Button buttonMikaList;
+
+    
 
 
     @Override
@@ -40,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
         editTextKeyword = findViewById(R.id.editTextKeyword);
 
         buttonWebCheck = findViewById(R.id.buttonWeb_Check);
-        buttonWeatherForecast = findViewById(R.id.buttonWeather_forecast);
+        buttonWeatherForecast = findViewById(R.id.buttonWeather_Forecast);
         buttonReadContactList = findViewById(R.id.buttonRead_ContactList);
         buttonSensor = findViewById(R.id.buttonSensor);
         buttonGmail = findViewById(R.id.buttonGmail);
+        buttonMikaList = findViewById(R.id.buttonListview);
 
 
         //"网络检测"
@@ -89,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         //"读取传感器信息"
         buttonSensor.setOnClickListener(v->{
-            Intent intent = new Intent("Sensor"); //
+            Intent intent = new Intent("SENSOR_CHECK"); //
             intent.addCategory(Intent.CATEGORY_DEFAULT); // 添加 Category
             // 检查是否能够正常跳转
             if (intent.resolveActivity(getPackageManager()) != null) {
@@ -112,6 +116,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if (buttonMikaList != null) {
+            buttonMikaList.setOnClickListener(v -> {
+                // 使用自定义 Action 进行隐式 Intent 跳转
+                Intent intent = new Intent("MikaListDisplay");
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "无法打开 Mika 表情列表页面", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     // 新增拨号功能

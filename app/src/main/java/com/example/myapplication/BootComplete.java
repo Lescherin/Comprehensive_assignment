@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 
-//开机广播
+//开机广播 接收广播信息
 public class BootComplete extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {

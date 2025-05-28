@@ -36,8 +36,9 @@ public class ContactSyncHelper {
         this.database = database;
     }
 
-    /*
+    /**
      请求读取和写入联系人的权限。
+     这一块部分主要由gemini辅助生成完成,没学过
      */
     public void requestContactsPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -67,7 +68,6 @@ public class ContactSyncHelper {
     /**
      * 处理权限请求的结果。
      * 当用户响应权限请求对话框后，此方法被调用。
-     *
      * @param requestCode  权限请求的请求码
      * @param permissions  请求的权限数组
      * @param grantResults 授权结果数组

@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="网络检测"/>
     <Button
-        android:id="@+id/buttonWeather_forecast"
+        android:id="@+id/buttonWeather_Forecast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="城市天气预报"/>
@@ -41,6 +41,17 @@
         android:layout_height="wrap_content"
         android:text="传感器实时检测"/>
 
+    <Button
+        android:id="@+id/buttonListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mika 表情列表页面" />
+
+    <Button
+        android:id="@+id/buttonMGS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="彩蛋内容跳转" />
 
 
 

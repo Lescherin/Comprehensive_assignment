@@ -19,6 +19,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -68,7 +69,7 @@ public class Weather_Forecast extends AppCompatActivity {
                 sendRequestWithHttpURLConnection(cityName);
             }
         }
-
+        //做绑定
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 sendRequestWithHttpURLConnection(editText.getText().toString());
@@ -83,6 +84,7 @@ public class Weather_Forecast extends AppCompatActivity {
 
             @Override
             public void run() {
+                //匹配apk内容
                 try {
                     Map<String, String> parameters = new HashMap<>();
                     parameters.put("appid", getResources().getString(R.string.appid));
@@ -97,7 +99,7 @@ public class Weather_Forecast extends AppCompatActivity {
                         content += "?";
                         for (Map.Entry<String, String> entry : parameters.entrySet()) {
                             content += "&" + entry.getKey() + "=" + URLEncoder.encode(entry.getValue(),
-                                    "utf-8");
+                                    StandardCharsets.UTF_8);
                         }
                     }
 

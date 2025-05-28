@@ -26,7 +26,6 @@
             <action android:name="android.intent.action.DIAL" />
             <data android:scheme="tel" />
         </intent>
-
     </queries>
 
 
@@ -56,9 +55,6 @@
             android:exported="true"
             android:label="网络状态诊断"
             android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
             <intent-filter>
                 <action android:name="WEB_CHECK" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -70,9 +66,6 @@
             android:exported="true"
             android:label="城市天气预报"
             android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
             <intent-filter>
                 <action android:name="WEATHER_FORECAST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -82,11 +75,7 @@
         <activity
             android:name=".Read_ContactList"
             android:exported="true"
-            android:label="本地联系人管理"
-            >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            android:label="本地联系人管理">
             <intent-filter>
                 <action android:name="READ_CONTACTLIST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -99,11 +88,21 @@
             android:label="传感器实时检测"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="Sensor" />
+                <action android:name="SENSOR_CHECK" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".MikaListDisplayActivity"
+            android:exported="true"
+            android:label="Mika 可爱表情包"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="MikaListDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <!--广播部分-->
         <receiver
