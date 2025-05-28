@@ -7,12 +7,13 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
-import android.net.Uri; // 确保导入 Uri
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem; // 导入 MenuItem
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
-import androidx.appcompat.app.ActionBar; // 导入 ActionBar
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 

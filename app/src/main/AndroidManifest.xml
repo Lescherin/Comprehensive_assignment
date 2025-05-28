@@ -75,7 +75,8 @@
         <activity
             android:name=".Read_ContactList"
             android:exported="true"
-            android:label="本地联系人管理">
+            android:label="本地联系人管理"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="READ_CONTACTLIST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -100,6 +101,17 @@
             android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="MikaListDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MetalGearSolid_PV"
+            android:exported="true"
+            android:label="合金装备3食蛇者行动PV"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="MGS_PV" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

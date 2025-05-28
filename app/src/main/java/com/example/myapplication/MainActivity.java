@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editTextKeyword;
 
-    // 新增按钮引用
+    // 主页面按钮
     private Button buttonWebCheck;
     private Button buttonWeatherForecast;
     private Button buttonGmail; 
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonSensor;
     private Button buttonMikaList;
 
+    private Button buttonMGS;
     
 
 
@@ -48,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
         buttonSensor = findViewById(R.id.buttonSensor);
         buttonGmail = findViewById(R.id.buttonGmail);
         buttonMikaList = findViewById(R.id.buttonListview);
+        buttonMGS = findViewById(R.id.buttonMGS);
 
 
+        //每个跳转我都做了判断用于检测是否跳转成功
         //"网络检测"
         buttonWebCheck.setOnClickListener(v -> {
             String keyword = editTextKeyword.getText().toString();
@@ -101,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(MainActivity.this, "无法打开传感器", Toast.LENGTH_SHORT).show();
             }
-
         });
 
         // "打开GMAIL邮箱,进行发送邮件"
@@ -116,18 +118,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (buttonMikaList != null) {
-            buttonMikaList.setOnClickListener(v -> {
-                // 使用自定义 Action 进行隐式 Intent 跳转
-                Intent intent = new Intent("MikaListDisplay");
-                intent.addCategory(Intent.CATEGORY_DEFAULT);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MainActivity.this, "无法打开 Mika 表情列表页面", Toast.LENGTH_SHORT).show();
+        /*跳转到ListviewDisplay页面*/
+        buttonMikaList.setOnClickListener(v -> {
+            Intent intent = new Intent("MikaListDisplay");
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "无法打开 Mika 表情列表页面", Toast.LENGTH_SHORT).show();
                 }
             });
-        }
+
+        /*跳转到多媒体页面*/
+        buttonMGS.setOnClickListener(v -> {
+            Intent intent = new Intent("MGS_PV"); //
+            intent.addCategory(Intent.CATEGORY_DEFAULT); // 添加 Category
+            // 检查是否能够正常跳转
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "无法打开多媒体页面", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
     }
 
     // 新增拨号功能
