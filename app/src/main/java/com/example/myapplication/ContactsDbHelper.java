@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class ContactsDbHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "MyContacts.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String TABLE_CONTACTS = "contacts";
     public static final String COLUMN_ID = "_id";           //联系人编号做主键
@@ -19,7 +19,7 @@ public class ContactsDbHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_CONTACTS + " (" +
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_NAME + " TEXT NOT NULL Unique, " +
-                    COLUMN_PHONE + " TEXT NOT NULL,"+
+                    COLUMN_PHONE + " TEXT NOT NULL Unique,"+
                     COLUMN_EMAIL + " TEXT" +
                     ");";
 

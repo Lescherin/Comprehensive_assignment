@@ -264,6 +264,8 @@ public class Read_ContactList extends AppCompatActivity {
             // 检查是否是因为姓名重复（违反了 ContactsDbHelper 中定义的姓名 UNIQUE 约束）
             if (e.getMessage() != null && e.getMessage().contains("UNIQUE constraint failed: " + ContactsDbHelper.TABLE_CONTACTS + "." + ContactsDbHelper.COLUMN_NAME)) {
                  Toast.makeText(this, "添加失败：姓名 '" + name + "' 已存在。", Toast.LENGTH_LONG).show();
+            }else if (e.getMessage().contains("UNIQUE constraint failed: " + ContactsDbHelper.TABLE_CONTACTS + "." + ContactsDbHelper.COLUMN_PHONE)) {
+                Toast.makeText(this, "添加失败：电话号码 '" + phone + "' 已存在。", Toast.LENGTH_LONG).show();
             } else {
                 // 其他类型的约束冲突，例如某个字段设置了 NOT NULL 但插入时为 null
                 Toast.makeText(this, "添加失败：数据不符合约束。", Toast.LENGTH_LONG).show();
