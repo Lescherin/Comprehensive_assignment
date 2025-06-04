@@ -20,6 +20,20 @@ Web_Check.java	实现网络状态监听、浏览器跳转搜索和自定义广�
 Weather_Forecast.java	通过外部API获取天气信息，展示网络请求与JSON解析。
 MyTrustManager.java	用于网络安全连接时的信任管理（配合天气API模块使用）
 
+## 技术点归纳:
+### 本学期技术：
+用户界面设计（ListView、EditText、Button等）
+活动与广播（Activity跳转、BroadcastReceiver）
+网络技术（天气API、WebView、浏览器跳转）
+数据持久化（SQLite数据库）
+传感器读取（SensorManager）
+多媒体（MediaPlayer、VideoView）
+注：部分复杂功能（如联系人同步、数据库功能）参考了AI助手。
+	多媒体、传感器部分用于练习实例做修改。
+### 课外技术：来源Gemini辅助、教师提供的相关代码、git仓库做版本同步上传
+联系人同步到系统通讯录（ContactSyncHelper）
+网络安全信任管理（MyTrustManager）
+![image](https://github.com/user-attachments/assets/184413fd-7f55-4504-b755-c669d3495744)
 
 
 
